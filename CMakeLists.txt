@@ -12,6 +12,9 @@ add_executable(mccm "")
 set_target_properties(mccm PROPERTIES OUTPUT_NAME "mccm")
 set_target_properties(mccm PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/build/windows/x64/release")
 target_include_directories(mccm PRIVATE
+    include
+)
+target_include_directories(mccm PRIVATE
     C:/Users/liu01/AppData/Local/.xmake/packages/c/coost/v3.0.0/8740acc100024f88bd62575f6add4dcd/include
     C:/Users/liu01/AppData/Local/.xmake/packages/l/libcurl/7.87.0/a2ac3a70b1e948b1843919b4cbb41b7f/include
     C:/Users/liu01/AppData/Local/.xmake/packages/o/openssl/1.1.1-t/9458079689e342b58f2f2e8d4b2fb860/include
@@ -61,6 +64,7 @@ target_link_directories(mccm PRIVATE
     C:/Users/liu01/AppData/Local/.xmake/packages/o/openssl/1.1.1-t/9458079689e342b58f2f2e8d4b2fb860/lib
 )
 target_sources(mccm PRIVATE
-    src/main.cpp
+    src/main.cxx
+    src/impl/test.cxx
 )
 

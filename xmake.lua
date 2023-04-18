@@ -7,7 +7,14 @@ add_requires("coost", {configs = {libcurl = true, openssl = true}})
 target("mccm")
     set_kind("binary")
 
-    add_files("src/*.cpp")
+    add_files(
+        "src/*.cxx",
+        "src/impl/*.cxx"
+    )
+
+    add_includedirs(
+        "include"
+    )
 
     add_packages("coost")
 
